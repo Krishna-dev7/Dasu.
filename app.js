@@ -131,7 +131,7 @@ function displayItem(item){
             <div class="items">
             <img src=${el["img"]} alt=${el["title"]}>
                 <div class="item-section">
-                    <p>Price: <span>${el["price"]}/span></p>
+                    <p>Price: <span>${el["price"]}</span></p>
                     <button class="buttons"><a href="#book">Buy Now</a><i class="ri-arrow-right-up-line"></i></button>
                 </div>
             </div>
