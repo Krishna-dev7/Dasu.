@@ -38,6 +38,28 @@ nav {
     padding: 20px;
 }
 
+#menu-icon {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#side-bar {
+    position: fixed;
+    top: 0px;
+    color: white;
+    background-color: black;
+    height: 100vh;
+    width: 300px;
+    z-index: 10000;
+}
+
+.hide {
+    right: -300px;
+}
+
 nav ul {
     width: 30%;
     display: flex;
@@ -123,7 +145,7 @@ nav ul a {
 }
 
 .buttons {
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: #ae9de8;
     border: none;
     color: white;
@@ -285,16 +307,16 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0px;
     margin-top: 40px;
 }
 
 #left {
-    width: 40%;
-    /* height: 90vh; */
+    width: 36%;
+    height: 90%;
     text-align: start;
     font-size: 2rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -302,7 +324,7 @@ a {
 #left h2 {
     /* margin: 20px 5px; */
     margin: 5px;
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 #right {
@@ -330,8 +352,8 @@ a {
     margin: 15px auto;
 }
 
-label {
-    font-size: 1.3rem;
+label { 
+    font-size: 1.2rem;
 }
 
 input {
@@ -369,11 +391,54 @@ input:focus {
     html {
         font-size: 10px;
     }
+
+    nav ul {
+        display: none;   
+    }
+
+    #menu-icon {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: black;
+        cursor: pointer;
+        z-index: 2000;
+    }
+    label:hover {
+        cursor: pointer;
+    }
+
+    #side-bar {
+        top: 0px;
+        font-size: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        padding-top: -20px;
+        /* width: 100vh; */
+    }
+
+    #side-bar ul li{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .show {
+        display: inline-block;
+        right: 0px;
+    }
+
+    #cross {
+        text-align: right;
+
+    }
     #collaborator .category{
         width: 70%;
         justify-content: flex-start;
     }
-
+    .category li {
+        font-size: 1.5rem;
+    }
     .brand {
         /* width: 100vw; */
         justify-self: center;
@@ -408,17 +473,83 @@ input:focus {
         flex-direction: column;
     }
 
-    .login-region {
-        flex-direction: column;
+    #right {
         width: 100%;
+        padding: 1px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .controls {
+        width: 100%;
+        padding: 1px;
+        margin-bottom: 10px;
     }
 
-    #right {
-        width: 100vh;
+    #right form {
+        width: 100%;
+        padding: 5px;
+        margin: 2px auto;
+        font-size: 1.5rem;
+    }
+    input {
+        font-size: 1.5rem;
+        height: 3.2rem;
+    }
+    #left {
+        width: 100%;
+        margin: 0px;
+    }
+    #left h2 {
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        /* height: fit-content; */
+    }
+    label {
+        font-size: 1.5rem;
+    }
+
+    .login-region {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page3 {
         padding: 5px;
     }
 
-    input {
-        height: 3.2rem;
+    .buttons {
+        padding: 8px 10px;
+        font-size: 1.3rem;
     }
+}
+
+/* some classes to add some style using jquery */
+.hide {
+    margin: 10px 0px;
+    color: white;
+}
+
+.err{
+    border: 1px solid orangered;
+}
+
+
+/* Order page styling */
+
+#search {
+    display: block;
+    width: 400px;
+    color: black;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 2px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-indent: 20px;
 }
